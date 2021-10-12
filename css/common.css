@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 320px;
     font-family: 'Roboto Slab', 'Noto Serif JP', 'メイリオ', 'Meiryo', sans-serif;
 }
 
@@ -127,4 +128,60 @@ footer {
 .icon-container img:hover {
     filter: invert(100%);
     transition: 1s;
+}
+
+.sp-parts {
+    display: none;
+}
+
+@media only screen and (max-width:37.4rem) {
+    nav {
+        width: 15%;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    .content-container::before {
+        border-width: 49vh 43vw;
+    }
+    
+    .menu-list-container li {
+        border-bottom: none;
+    }
+
+    .menu-list-container li:hover {
+        background-color: var(--main-bg-color);
+        color: var(--main-text-color);
+    }
+
+    .menu-list-container a:hover {
+        filter: invert(100%);
+        transition: 1s;
+    }
+
+    .icon-container {
+        flex-direction: column;
+    }
+
+    .icon-container img {
+        object-fit: cover;
+        width: 300%;
+        margin: 100% auto;
+    }
+
+    .pc-parts {
+        display: none;
+    }
+
+    .sp-parts {
+        display: block;
+    }
+
+    .sp-parts img {
+        object-fit: cover;
+        width: 100%;
+        fill: white;
+    }
 }
