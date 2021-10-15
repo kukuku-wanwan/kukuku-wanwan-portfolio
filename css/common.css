@@ -220,7 +220,7 @@ section > div:nth-child(2) {
 
 section > div:nth-child(2) > h2, section > div:nth-child(2) > h3 {
     padding-left: 5rem;
-    padding-right: 15rem;
+    padding-right: 20vw;
     text-align: left;
 }
 
@@ -234,7 +234,7 @@ section > div:nth-child(3) {
 }
 
 section > div:nth-child(3) > h2, section > div:nth-child(3) > h3 {
-    padding-left: 15rem;
+    padding-left: 20vw;
     padding-right: 5rem;
     text-align: right;
 }
