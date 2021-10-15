@@ -267,6 +267,27 @@ section img:hover {
     transition: 1s;
 }
 
+.works-contents {
+    margin-bottom: 1rem;
+}
+
+.works-contents > h3::before {
+    content: "■";
+    font-size: small;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+}
+
+.works-contents > img {
+    width: auto;
+}
+
+.works-contents > img:hover {
+    filter: invert(0%);
+    transition: 0s;
+}
+
 @media only screen and (max-width:37.4rem) {
     nav {
         width: 15%;
