@@ -7,6 +7,67 @@
     --base-bg-color: White;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100vw;
+    font-size: 1rem;
+    background-color: var(--main-bg-color);
+    position: fixed;
+    z-index: 1;
+}
+
+section {
+    margin-top: 3rem;
+    min-height: calc(100vh - 4.5rem);
+}
+
+.header-left-menu {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+}
+
+.header-left-menu a {
+    text-decoration: none;
+    color: var(--base-text-color);
+    padding: 0.75rem 1rem;
+    transition: 1s;
+}
+
+.header-left-menu a:hover {
+    color: var(--main-text-color);
+    background-color: var(--base-bg-color);
+}
+
+.header-right-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-right-menu ul {
+    display: flex;
+    flex-direction: row;
+}
+.header-right-menu li {
+    list-style: none;
+    line-height: 1.0rem;
+}
+
+.header-right-menu a {
+    text-decoration: none;
+    color: var(--base-text-color);
+    padding: 0.85rem 1rem;
+    transition: 1s;
+}
+
+.header-right-menu a:hover {
+    color: var(--main-text-color);
+    background-color: var(--base-bg-color);
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -134,6 +195,78 @@ footer {
     display: none;
 }
 
+section > div {
+    min-height: 50vh;
+}
+
+section > div:nth-child(1) {
+    background-color: var(--accent-bg-color);
+    margin-top: -3.4rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+section > div:nth-child(1) > h1 {
+    color: var(--main-text-color);
+    padding-top: 15vh;
+    font-size: 5rem;
+}
+
+section > div:nth-child(2) {
+    background-color: var(--base-bg-color);
+    text-align: center;
+    vertical-align: middle;
+}
+
+section > div:nth-child(2) > h2, section > div:nth-child(2) > h3 {
+    padding-left: 5rem;
+    padding-right: 15rem;
+    text-align: left;
+}
+
+section > div:nth-child(3) {
+    background-color: var(--accent-bg-color);
+    text-align: center;
+    vertical-align: middle;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    border-bottom: 1px solid;
+    border-color: var(--base-bg-color);
+}
+
+section > div:nth-child(3) > h2, section > div:nth-child(3) > h3 {
+    padding-left: 15rem;
+    padding-right: 5rem;
+    text-align: right;
+}
+
+section > div:nth-child(3) > h2 {
+    padding-top: 25vh;
+}
+
+
+section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 5rem;
+}
+
+section li {
+    list-style-type: none;
+    margin-left: 2rem;
+}
+
+section img {
+    object-fit: cover;
+    width: 32px;
+    fill: white;
+}
+
+section img:hover {
+    filter: invert(100%);
+    transition: 1s;
+}
+
 @media only screen and (max-width:37.4rem) {
     nav {
         width: 15%;
@@ -171,6 +304,18 @@ footer {
         margin: 100% auto;
     }
 
+    .header-right-menu ul {
+        margin-top: 0.75rem;
+    }
+    
+    .header-right-menu li {
+        margin-right: 1rem;
+    }
+    
+    .header-right-menu a {
+        padding: 0%;
+    }
+
     .pc-parts {
         display: none;
     }
@@ -183,5 +328,9 @@ footer {
         object-fit: cover;
         width: 100%;
         fill: white;
+    }
+
+    .header-right-menu img {
+        width: auto;
     }
 }
